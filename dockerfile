@@ -14,3 +14,13 @@ RUN npm build
 COPY ./files/requirements.txt requirements.txt
 
 ADD ./files.tar.gz ./
+
+RUN useradd joao
+
+USER joao
+
+EXPOSE 8080
+
+ENTRYPOINT [ "ping"]
+
+CMD [ "localhost" ]
