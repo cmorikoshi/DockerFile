@@ -21,6 +21,8 @@ USER joao
 
 EXPOSE 8080
 
+VOLUME [ "/data" ]
+
 ENTRYPOINT [ "ping"]
 
 CMD [ "localhost" ]
